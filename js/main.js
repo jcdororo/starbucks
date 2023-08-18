@@ -17,3 +17,37 @@ searchInputEl.addEventListener('blur', function() { // blur : 포커스가 해�
     searchEl.classList.remove('focused'); //
     searchInputEl.setAttribute('placeholder', ''); // Attribute:HTML속성, 어떤 HTML속성을 지정하겠다.
 });
+
+const badgeEl = document.querySelector('header .badges');
+
+// lodash cdn
+window.addEventListener('scroll', _.throttle(function() {
+    console.log('asd');
+    if (window.scrollY > 500) {
+        // 배지 숨기기
+        // badgeEl.style.display = 'none';
+        // gsap.to(요소, 지속시간, 옵션);
+        gsap.to(badgeEl, .6, {
+            opacity: 0,
+            display: 'none'
+        });
+    } else {
+        // 배지 보이기
+        // badgeEl.style.display = 'block';
+        gsap.to(badgeEl, .6, {
+            opacity: 1,
+            display: 'block'
+        });
+    }
+}, 300));
+// _.throttle(함수, ms시간)
+
+
+
+
+
+
+
+
+
+
