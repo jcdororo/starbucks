@@ -47,10 +47,5 @@ $ git push origin main(master)
 
 git status  
 
-git commit -m 'Add README.md'  
+
 git log  
-
-git remote add origin 'https://github/jcdororo'
-git push origin master
-
-test
