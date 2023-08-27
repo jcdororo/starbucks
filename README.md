@@ -44,8 +44,9 @@ $git remote add origin 'https://github.com/jcdororo/...'
 # origin이란 별칭의 원격 저장소로 버전 내역 전송.
 $ git push origin main(master)
 
+# 브랜치 확인
+$ git branch
 
-git status  
-
-
-git log  
+git branch -a 브랜치들 확인    
+git branch signin  signin 브랜치 생성  
+git checkout signin 브랜치 signin으로 변경    
