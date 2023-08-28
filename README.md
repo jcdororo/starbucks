@@ -55,6 +55,7 @@ $ cd "원하는 디렉토리"
 
 $ code . -r
 
-git branch -a 브랜치들 확인    
+git branch -a 브랜치들 확인    .
+
 git branch signin  signin 브랜치 생성  
 git checkout signin 브랜치 signin으로 변경    
