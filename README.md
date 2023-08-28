@@ -47,6 +47,15 @@ $ git push origin main(master)
 # 브랜치 확인
 $ git branch
 
+# 브랜치 목록 확인
+git branch -a 
+
+# 브랜치 생성
+$ git branch "signin" // signin 브랜치 생성
+
+# 브랜치 변경
+$ git checkout "signin" // 브랜치 signin으로 변경    
+
 # 프로젝트 복제
 $ git clone 
 
@@ -55,7 +64,13 @@ $ cd "원하는 디렉토리"
 
 $ code . -r
 
-git branch -a 브랜치들 확인    .
+# 버전(커밋내역) 되돌리기
+$ git reset --hard HEAD~1 // 한번
+$ git reset --hard HEAD~2 // 두번
+## 되돌린것 철회하기 (한번 가능)
+$ git reset --hard ORIG_HEAD
 
-git branch signin  signin 브랜치 생성  
-git checkout signin 브랜치 signin으로 변경    
+
+
+
+
