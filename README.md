@@ -47,14 +47,24 @@ $ git push origin main(master)
 # 브랜치 확인
 $ git branch
 
-# 브랜치 목록 확인
-git branch -a 
+# 로컬 브랜치 목록 확인
+$ git branch -a 
+
+# 원격 브랜치 목록 확인
+$ git branch -r
 
 # 브랜치 생성
 $ git branch "signin" // signin 브랜치 생성
 
-# 브랜치 변경
+# 로컬 브랜치 변경
 $ git checkout "signin" // 브랜치 signin으로 변경    
+
+# 원격 브랜치 가져오기
+$ git checktout "-t origin/signin"
+
+# 브랜치 삭제하기
+$ git branch -d "signin"
+
 
 # 프로젝트 복제
 $ git clone 
@@ -65,12 +75,30 @@ $ cd "원하는 디렉토리"
 $ code . -r
 
 # 버전(커밋내역) 되돌리기
-$ git reset --hard HEAD~1 // 한번
+$ git reset --hard HEAD~1 // 한번  
+
 $ git reset --hard HEAD~2 // 두번
 ## 되돌린것 철회하기 (한번 가능)
 $ git reset --hard ORIG_HEAD
 
 
+# 브랜치 이름 변경
+$ git branch -m master main
+
+# git의 기본 브랜치 이름 설정
+$ git config --global init.defaultBranch main
+
+# 버전 관리 하지 않을 폴더 및 파일 설정(.gitignore)
+.gitignore 파일을 생성하여 버전관리 하지 않을 파일 및 폴더를 작성하면 된다.
+
+# gitignore를 미쳐 못한 파일 및 폴더가 있을 경우
+$ git rm -r --cached .
 
 
 
+# Git 브랜치 전략 - Git Flow
+## main(master) - 기본/메인/제품 브랜치  
+## dev(develop) - 다음 제품 출시를 위해 여러 기능을 병합하는 브랜치
+## feature/* - 각 기능 개발을 위한 브랜치
+## release - 이번 제품 출시 직전 최종 테스트(QA)를 위한 브랜치
+## hotfix - 제품에 버그가 확인되었을 때 긴급 수정을 위한 브랜치
