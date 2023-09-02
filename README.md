@@ -1,6 +1,9 @@
 # starbucks
 # 패스트캠퍼스 프론트엔드 강의 스타벅스 예제 실습
 
+# netly 배포
+https://profound-malasada-58cf7f.netlify.app/
+
 ## Start
 # Git을 활용한 버전관리
 
